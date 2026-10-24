@@ -1,0 +1,58 @@
+{
+  "llm": "mock",
+  "parallel": true,
+  "warnings": [],
+  "validation_ok": true,
+  "attempts": 1,
+  "seconds": 0.7,
+  "log": [
+    {
+      "stage": "1-retrieve",
+      "agent": "SheetRetrievalAgent",
+      "status": "ok",
+      "seconds": 0.002
+    },
+    {
+      "stage": "1-retrieve",
+      "agent": "APIRetrievalAgent",
+      "status": "ok",
+      "seconds": 0.603
+    },
+    {
+      "stage": "1-retrieve",
+      "agent": "PDFRetrievalAgent",
+      "status": "ok",
+      "seconds": 0.693
+    },
+    {
+      "stage": "2-analyse",
+      "agent": "SalesAnalystAgent",
+      "status": "ok",
+      "seconds": 0.001
+    },
+    {
+      "stage": "2-analyse",
+      "agent": "FeedbackAnalystAgent",
+      "status": "ok",
+      "seconds": 0.001
+    },
+    {
+      "stage": "2-analyse",
+      "agent": "MarketAnalystAgent",
+      "status": "ok",
+      "seconds": 0.0
+    },
+    {
+      "stage": "3-synthesise",
+      "agent": "ExecutiveSummaryAgent",
+      "status": "ok",
+      "seconds": 0.0
+    },
+    {
+      "stage": "4-validate",
+      "agent": "ValidatorAgent",
+      "status": "ok",
+      "seconds": 0.0
+    }
+  ]
+}

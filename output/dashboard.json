@@ -1,0 +1,131 @@
+{
+  "generated": "2026-10-22",
+  "sales": {
+    "total_revenue": 236290.0,
+    "total_units": 506,
+    "n_orders": 148,
+    "rows_dropped": 5,
+    "by_region": {
+      "Cairo": 86550.0,
+      "Giza": 65050.0,
+      "Alexandria": 51710.0,
+      "Delta": 32980.0
+    },
+    "by_product": {
+      "Tablet": 43050.0,
+      "Laptop": 110700.0,
+      "Headset": 9040.0,
+      "Phone": 73500.0
+    },
+    "by_month": {
+      "2026-07": 80790.0,
+      "2026-08": 88420.0,
+      "2026-09": 67080.0
+    },
+    "top_region": "Cairo",
+    "worst_region": "Delta",
+    "top_region_share_pct": 36.6,
+    "top_product": "Laptop",
+    "worst_product": "Headset",
+    "top_product_revenue": 110700.0,
+    "last_month": "2026-09",
+    "growth_last_month_pct": -24.1
+  },
+  "feedback": {
+    "n_comments": 20,
+    "avg_rating": 3.15,
+    "pct_positive": 45.0,
+    "pct_neutral": 15.0,
+    "pct_negative": 40.0,
+    "topic_counts": {
+      "delivery": 8,
+      "quality": 7,
+      "price": 5,
+      "support": 8,
+      "app": 4
+    },
+    "negative_topic_counts": {
+      "delivery": 4,
+      "support": 4,
+      "quality": 3,
+      "app": 2,
+      "price": 1
+    },
+    "top_topic": "delivery",
+    "worst_topic": "delivery",
+    "city_avg_rating": {
+      "Cairo": 3.8,
+      "Alexandria": 3.0,
+      "Giza": 3.4,
+      "Delta": 2.4
+    },
+    "best_city": "Cairo",
+    "worst_city": "Delta"
+  },
+  "market": {
+    "usd_egp": 54.39,
+    "usd_eur": 0.89,
+    "usd_sar": 3.75,
+    "rates_source": "live API",
+    "total_revenue_usd": 236290.0,
+    "total_revenue_egp": 12850675.0
+  },
+  "meta": {
+    "llm": "mock",
+    "parallel": true,
+    "warnings": [],
+    "validation_ok": true,
+    "attempts": 1,
+    "seconds": 0.7,
+    "log": [
+      {
+        "stage": "1-retrieve",
+        "agent": "SheetRetrievalAgent",
+        "status": "ok",
+        "seconds": 0.002
+      },
+      {
+        "stage": "1-retrieve",
+        "agent": "APIRetrievalAgent",
+        "status": "ok",
+        "seconds": 0.603
+      },
+      {
+        "stage": "1-retrieve",
+        "agent": "PDFRetrievalAgent",
+        "status": "ok",
+        "seconds": 0.693
+      },
+      {
+        "stage": "2-analyse",
+        "agent": "SalesAnalystAgent",
+        "status": "ok",
+        "seconds": 0.001
+      },
+      {
+        "stage": "2-analyse",
+        "agent": "FeedbackAnalystAgent",
+        "status": "ok",
+        "seconds": 0.001
+      },
+      {
+        "stage": "2-analyse",
+        "agent": "MarketAnalystAgent",
+        "status": "ok",
+        "seconds": 0.0
+      },
+      {
+        "stage": "3-synthesise",
+        "agent": "ExecutiveSummaryAgent",
+        "status": "ok",
+        "seconds": 0.0
+      },
+      {
+        "stage": "4-validate",
+        "agent": "ValidatorAgent",
+        "status": "ok",
+        "seconds": 0.0
+      }
+    ]
+  }
+}
